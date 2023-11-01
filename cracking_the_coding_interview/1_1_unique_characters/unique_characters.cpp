@@ -51,6 +51,7 @@ bool is_unique_chars_02(std::string& input) {
         std::cerr << "Assertion failed: " << #expression \
                   << "\nFile: " << __FILE__ << "\n"      \
                   << "\nLine: " << __LINE__ << "\n";     \
+        return false;                                    \
     }
 
 
