@@ -1,11 +1,12 @@
 CXX=clang++
 CXXFLAGS=-Wall -std=c++20
-CPP_SOURCE=one_edit_away.cpp
-CPP_TEST=test_one_edit_away_cpp
 
-PYTHON_FILE=one_edit_away.py
+NAME=one_edit_away
 
-RUST_FILE=one_edit_away.rs
+CPP_SOURCE=$(NAME).cpp
+CPP_TEST=test_$(NAME)_cpp
+PYTHON_FILE=$(NAME).py
+RUST_FILE=$(NAME).rs
 
 cpp_test: $(CPP_SOURCE)
 	$(CXX) $(CXXFLAGS) $(CPP_SOURCE) -o $(CPP_TEST)

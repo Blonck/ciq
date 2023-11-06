@@ -1,14 +1,14 @@
 CXX=clang++
 CXXFLAGS=-Wall -std=c++20
-CPP_SOURCE=rotate_matrix.cpp
-CPP_TEST=test_rotate_matrix_cpp
-
 CUDA_COMPILER=nvcc
-CUDA_SOURCE=rotate_matrix.cu
-CUDA_TEST=test_rotate_matrix_cuda
 
+NAME=rotate_matrix
+
+CPP_SOURCE=$(NAME).cpp
+CPP_TEST=test_$(NAME)_test
+CUDA_SOURCE=$(NAME).cu
+CUDA_TEST=test_$(NAME)_cuda
 PYTHON_FILE=rotate_matrix.py
-
 RUST_FILE=rotate_matrix.rs
 
 cpp_test: $(CPP_SOURCE)

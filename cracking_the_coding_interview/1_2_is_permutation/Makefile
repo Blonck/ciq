@@ -1,11 +1,12 @@
 CXX=clang++
 CXXFLAGS=-Wall -std=c++20
-CPP_SOURCE=is_permutation.cpp
-CPP_TEST=test_is_permutation_cpp
 
-PYTHON_FILE=is_permutation.py
+NAME=is_permutation
 
-RUST_FILE=is_permutation.rs
+CPP_SOURCE=$(NAME).cpp
+CPP_TEST=test_$(NAME)_cpp
+PYTHON_FILE=$(NAME).py
+RUST_FILE=$(NAME).rs
 
 cpp_test: $(CPP_SOURCE)
 	$(CXX) $(CXXFLAGS) $(CPP_SOURCE) -o $(CPP_TEST)

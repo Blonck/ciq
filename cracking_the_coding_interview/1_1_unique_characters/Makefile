@@ -1,11 +1,12 @@
 CXX=clang++
 CXXFLAGS=-Wall -std=c++20
-CPP_SOURCE=unique_characters.cpp
-CPP_TEST=test_unique_characters_cpp
 
-PYTHON_FILE=unique_characters.py
+NAME=unique_characters
 
-RUST_FILE=unique_characters.rs
+CPP_SOURCE=$(NAME).cpp
+CPP_TEST=test_$(NAME)_cpp
+PYTHON_FILE=$(NAME).py
+RUST_FILE=$(NAME).rs
 
 cpp_test: $(CPP_SOURCE)
 	$(CXX) $(CXXFLAGS) $(CPP_SOURCE) -o $(CPP_TEST)

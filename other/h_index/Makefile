@@ -1,11 +1,12 @@
 CXX=clang++
 CXXFLAGS=-Wall -std=c++20
-CPP_SOURCE=h_index.cpp
-CPP_TEST=test_h_index_cpp
 
-PYTHON_FILE=h_index.py
+NAME=h_index
 
-RUST_FILE=h_index.rs
+CPP_SOURCE=$(NAME).cpp
+CPP_TEST=test_$(NAME)_cpp
+PYTHON_FILE=$(NAME).py
+RUST_FILE=$(NAME).rs
 
 cpp_test: $(CPP_SOURCE)
 	$(CXX) $(CXXFLAGS) $(CPP_SOURCE) -o $(CPP_TEST)

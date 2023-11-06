@@ -1,11 +1,12 @@
 CXX=clang++
 CXXFLAGS=-Wall -std=c++20
-CPP_SOURCE=string_compression.cpp
-CPP_TEST=test_string_compression_cpp
 
-PYTHON_FILE=string_compression.py
+NAME=string_compression
 
-RUST_FILE=string_compression.rs
+CPP_SOURCE=$(NAME).cpp
+CPP_TEST=test_$(NAME)_cpp
+PYTHON_FILE=$(NAME).py
+RUST_FILE=$(NAME).rs
 
 cpp_test: $(CPP_SOURCE)
 	$(CXX) $(CXXFLAGS) $(CPP_SOURCE) -o $(CPP_TEST)
