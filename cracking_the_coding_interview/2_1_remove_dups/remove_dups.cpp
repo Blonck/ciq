@@ -5,6 +5,10 @@
 #include <list>
 #include <unordered_set>
 
+// Remove all duplicates from given unsorted list.
+//
+// time complexity: O(N)
+// space complexity: O(1)
 void delete_dups(std::list<int>& list) {
     std::unordered_set<int> seen;
 
