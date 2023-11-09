@@ -1,8 +1,9 @@
 import unittest
 
 class ListNode:
-    value = None
-    next = None
+    def __init__(self, value=None):
+        self.value = value
+        self.next = None
 
 
 # Remove all duplicates from given unsorted list.
@@ -26,24 +27,17 @@ def delete_dups(node: ListNode):
 
 # Create a singly linked list from given array.
 def make_list(values) -> ListNode:
-    head = ListNode
-    next = head
-    last = head
-
-    for value in values:
-        next.value = value
-        next.next = ListNode
-        last = next
-        next = next.next
-
-    # Remove last empty node from list
-    if last.value:
-        last.next = None
-        return head
-    # If there is not a valid last node, the initial values were
-    # already empty.
-    else:
+    if not values:
         return None
+
+    head = ListNode(values[0])
+    current_node = head
+
+    for value in values[1:]:
+        current_node.next = ListNode(value)
+        current_node = current_node.next
+
+    return head
 
 # Check if two singly linked lists are equal.
 def list_equal(node1: ListNode, node2: ListNode):
