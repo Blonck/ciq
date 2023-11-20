@@ -3,20 +3,8 @@ from collections import Counter
 
 # time complexity: O(N)
 # space complexity: O(N))
-def is_permutation(input1: str, input2: str) -> bool:
-    # early return if inputs have different length
-    if len(input2) != len(input1):
-        return False
-
-    counts = Counter(input1)
-
-    for c in input2:
-        counts[c] -= 1
-
-        if counts[c] < 0:
-            return False
-
-    return True
+def is_permutation(str1: str, str2: str) -> bool:
+    return Counter(str1) == Counter(str2)
 
 
 
